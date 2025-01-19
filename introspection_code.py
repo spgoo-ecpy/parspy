@@ -23,7 +23,7 @@ from neo4j import GraphDatabase
 # -----------------------------------------
 # Connexion a la base de donnees
 # -----------------------------------------
-myclient = pymongo.MongoClient("mongodb://192.168.121.5:27017/",username="ystroppa",password="rmc2024IAML",authSource="genielog",authMechanism='SCRAM-SHA-1')
+myclient = pymongo.MongoClient("mongodb://192.168.1.5:27017/",username="ystroppa",password="password",authSource="genielog",authMechanism='SCRAM-SHA-1')
 mydb = myclient["genielog"]
 mycol = mydb["bibliotheque"]
 
@@ -32,8 +32,8 @@ mycol = mydb["bibliotheque"]
 # Connexion à neo4j 
 # -----------------------------------
 #uri = "neo4j:///localhost:7690"
-uri = "bolt://192.168.121.5:7687"
-auth = ("neo4j", "rmc2024IAML")
+uri = "bolt://192.168.1.5:7687"
+auth = ("neo4j", "password")
 user, pwd = auth
 db = None
 
